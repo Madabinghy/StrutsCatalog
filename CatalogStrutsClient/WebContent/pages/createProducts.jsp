@@ -17,6 +17,6 @@
 		<s:submit value="creer le produits"></s:submit>
 	</s:form>
 
-	<a href="/pages/index.jsp">retour</a>
+	<a href="index.jsp">retour</a>
 </body>
 </html>
