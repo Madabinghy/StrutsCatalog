@@ -8,7 +8,7 @@
 <title>Catalogue</title>
 </head>
 <body>
-	<s:text name="Creer des produits : " />
+	<s:text name="Creer un produit : " />
 	<br>
 	<s:form action="CreateOneProduct" method="post">
 		<s:textfield name="nom" label="nom"></s:textfield>
