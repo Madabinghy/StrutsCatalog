@@ -16,8 +16,5 @@
      <s:form action="CreateProducts" method="post">
         <s:submit value="creer produits"></s:submit>
     </s:form>   
-     <s:form action="CreateOneProduct" method="post">
-        <s:submit value="creer un produit"></s:submit>
-    </s:form>    
 </body>
 </html>

@@ -9,7 +9,7 @@
 </head>
 <body>
 	<s:text name="Liste des produits : " /><br/>
-	Taille de la liste:<s:property value="%{lesProduits.size}"/><br/>
+	Il y a :<s:property value="%{lesProduits.size}"/><br/> produits !
 	<br/>
 	<s:iterator value="lesProduits">
 		<s:property value="nom" /><br/>
