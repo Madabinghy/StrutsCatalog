@@ -43,7 +43,7 @@ public class DeleteOneProductByNameAction extends ActionSupport{
 			catalog = (CatalogueRemote) ctx.lookup("CatalogueBean/remote");
 			
 			Produit pdt = new Produit(nom, description, prix);
-			catalog.ajouter(pdt);
+			catalog.add(pdt);
 			
 		} catch (NamingException e) {
 			// TODO Auto-generated catch block

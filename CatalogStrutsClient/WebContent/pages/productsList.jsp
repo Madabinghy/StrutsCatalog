@@ -9,13 +9,26 @@
 </head>
 <body>
 	<s:text name="Liste des produits : " /><br/>
-	Il y a :<s:property value="%{lesProduits.size}"/><br/> produits !
+	Il y a :<s:property value="%{lesProduits.size}"/> produits !
 	<br/>
+	<s:form action="DeleteProducts" method="post">
 	<s:iterator value="lesProduits">
-		<s:property value="nom" /><br/>
-		<s:property value="description" /><br/>
-		<s:property value="prix" /><br/>
+		<table border="2" bordercolor="black" style="width: 568px; ">
+			<tr>
+				<td>Nom</td><td style="width: 200px; ">Description</td><td>Prix</td><td>Supprimer?</td>
+			</tr>
+			<tr>
+				<td><s:property value="nom" /></td>
+				<td><s:property value="description" /></td>
+				<td ><s:property value="prix" /></td> 
+				<td><s:checkbox name="productTodelete" fieldValue="%{nom}" ></s:checkbox></td>
+			</tr>
+			
+		</table>
 	</s:iterator>
+	<s:submit value="supprimer"></s:submit>
+	</s:form>
+
 	<a href="index.jsp">retour</a>
 </body>
 </html>

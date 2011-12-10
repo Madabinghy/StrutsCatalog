@@ -8,7 +8,7 @@
 <title>Bienvenue sur le site marchand</title>
 </head>
 <body>
-<a href="createProducts.jsp">creer un produits</a>
+<a href="createProducts.jsp">creer un produit</a>
 
     <s:form action="GetProducts" method="post">
         <s:submit value="consulter produits"></s:submit>

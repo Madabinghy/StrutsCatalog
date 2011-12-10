@@ -5,16 +5,22 @@
 <struts>
 	<package name="gestionProduits" extends="struts-default">
 		<action name="GetProducts" class="client.catalog.actions.GetProductsAction">
-			<result>productsList.jsp</result>
+			<result>/pages/productsList.jsp</result>
 		</action>
 		
 		<action name="CreateProducts" class="client.catalog.actions.CreateProductsAction">
-			<result>productsList.jsp</result>
+			<result>/pages/productsList.jsp</result>
 		</action>
 		
 		<action name="CreateOneProduct" class="client.catalog.actions.CreateOneProductAction">
-			<result>productsList.jsp</result>
-		</action>		
+			<result>/pages/productsList.jsp</result>
+		</action>
+		<action name="DeleteProducts" class="client.catalog.actions.DeleteProductsByNameAction">
+			<result>/pages/index.jsp</result>
+		</action>
+		<action name="ViewHomePage">
+			<result>/pages/index.jsp</result>	
+		</action>
 		
 	</package>
 </struts>

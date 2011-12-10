@@ -15,7 +15,6 @@
 		<s:textfield name="prix" label="prix"></s:textfield>
 		<s:submit value="creer le produits"></s:submit>
 	</s:form>
-	
 
 	<a href="index.jsp">retour</a>
 </body>

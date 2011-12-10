@@ -30,9 +30,9 @@ public class CreateProductsAction extends ActionSupport{
 			Produit pdt2 = new Produit("poivre", "pour poivrer les ptits plats", 2.19);
 			Produit pdt3 = new Produit("epices", "pour epicer les ptits plats", 3.58);
 			
-			catalog.ajouter(pdt1);
-			catalog.ajouter(pdt2);
-			catalog.ajouter(pdt3);
+			catalog.add(pdt1);
+			catalog.add(pdt2);
+			catalog.add(pdt3);
 
 		} catch (NamingException e) {
 			// TODO Auto-generated catch block

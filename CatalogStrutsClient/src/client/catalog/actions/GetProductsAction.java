@@ -23,7 +23,7 @@ public class GetProductsAction extends ActionSupport{
     Produit produit;
  
     public List<Produit> getLesProduits() {
-		return catalog.getLesProduits();
+		return lesProduits;
     }
 
     public String execute(){
@@ -32,6 +32,7 @@ public class GetProductsAction extends ActionSupport{
 		try {
 			ctx = new InitialContext();
 			catalog = (CatalogueRemote) ctx.lookup("CatalogueBean/remote");
+			lesProduits =  catalog.getLesProduits();
 		} catch (NamingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

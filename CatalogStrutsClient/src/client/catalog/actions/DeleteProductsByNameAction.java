@@ -1,5 +1,7 @@
 package client.catalog.actions;
 
+import java.util.Iterator;
+
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -9,7 +11,7 @@ import catalog.entities.Produit;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-public class CreateOneProductAction extends ActionSupport{
+public class DeleteProductsByNameAction extends ActionSupport{
     /**
 	 * 
 	 */
@@ -17,22 +19,15 @@ public class CreateOneProductAction extends ActionSupport{
     CatalogueRemote catalog;
     //private Produit produit;
     
-	String nom;// = produit.getNom();
-	String description;// = produit.getDescription();
-	double prix;// = produit.getPrix();
+    private String[] productTodelete;
+    public String[] getProductTodelete() {
+        return productTodelete;
+    }
 
-    public void setNom(String nom){
-    	//this.produit.setNom(nom);
-    	this.nom=nom;
+    public void setProductTodelete(String[] productTodelete) {
+       this.productTodelete = productTodelete;
     }
-    public void setDescription(String description){
-    	//this.produit.setDescription(description);
-    	this.description=description;
-    }
-    public void setprix(String prix){
-    	//this.produit.setPrix(prix);
-    	this.prix=Double.valueOf(prix);
-    }
+
     
     public String execute(){
     	Context ctx;
@@ -41,9 +36,11 @@ public class CreateOneProductAction extends ActionSupport{
 		try {
 			ctx = new InitialContext();
 			catalog = (CatalogueRemote) ctx.lookup("CatalogueBean/remote");
+
+	    	for(String name : productTodelete){
+	    		catalog.deleteByName(name);
+	    	}
 			
-			Produit pdt = new Produit(nom, description, prix);
-			catalog.add(pdt);
 			
 		} catch (NamingException e) {
 			// TODO Auto-generated catch block
