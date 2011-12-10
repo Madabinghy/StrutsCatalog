@@ -33,7 +33,6 @@ public class CreateProductsAction extends ActionSupport{
 			catalog.ajouter(pdt1);
 			catalog.ajouter(pdt2);
 			catalog.ajouter(pdt3);
-			
 
 		} catch (NamingException e) {
 			// TODO Auto-generated catch block

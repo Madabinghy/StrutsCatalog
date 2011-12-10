@@ -13,6 +13,8 @@
 	<br/>
 	<s:iterator value="lesProduits">
 		<s:property value="nom" /><br/>
+		<s:property value="description" /><br/>
+		<s:property value="prix" /><br/>
 	</s:iterator>
 	<a href="index.jsp">retour</a>
 </body>

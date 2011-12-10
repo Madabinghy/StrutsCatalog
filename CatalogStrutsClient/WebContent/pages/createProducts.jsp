@@ -9,13 +9,13 @@
 </head>
 <body>
 	<s:text name="Creer un produit : " />
-	<br>
-	<s:form action="CreateOneProduct" method="post">
+	<br><s:form action="CreateOneProduct" method="post">
 		<s:textfield name="nom" label="nom"></s:textfield>
-		<s:textarea  name="description" label="description"></s:textarea>
+		<s:textarea name="description" label="description"></s:textarea>
 		<s:textfield name="prix" label="prix"></s:textfield>
 		<s:submit value="creer le produits"></s:submit>
 	</s:form>
+	
 
 	<a href="index.jsp">retour</a>
 </body>

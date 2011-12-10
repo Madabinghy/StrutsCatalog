@@ -9,7 +9,7 @@ import catalog.entities.Produit;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-public class CreateOneProductAction extends ActionSupport{
+public class DeleteOneProductByNameAction extends ActionSupport{
     /**
 	 * 
 	 */

@@ -5,15 +5,15 @@
 <struts>
 	<package name="gestionProduits" extends="struts-default">
 		<action name="GetProducts" class="client.catalog.actions.GetProductsAction">
-			<result>result.jsp</result>
+			<result>productsList.jsp</result>
 		</action>
 		
 		<action name="CreateProducts" class="client.catalog.actions.CreateProductsAction">
-			<result>result.jsp</result>
+			<result>productsList.jsp</result>
 		</action>
 		
 		<action name="CreateOneProduct" class="client.catalog.actions.CreateOneProductAction">
-			<result>result.jsp</result>
+			<result>productsList.jsp</result>
 		</action>		
 		
 	</package>
